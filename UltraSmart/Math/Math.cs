@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UltraSmart.Math
 {
-    class Math
+    public static class Math
     {
 
     }
