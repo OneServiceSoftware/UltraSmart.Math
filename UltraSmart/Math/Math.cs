@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UltraSmart.Math
+namespace UltraSmart
 {
     public static class Math
     {
