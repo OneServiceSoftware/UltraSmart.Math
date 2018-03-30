@@ -6,6 +6,9 @@ namespace UltraSmart
 {
     public static class Math
     {
+        /// <summary>
+        /// Returns the value of a combination without repeats. *Important: (N ≥ R)
+        /// </summary>
         public static double Combinatorial(double numN,double numR)
         {
             double result;
@@ -13,6 +16,9 @@ namespace UltraSmart
             return result;            
         }
 
+        /// <summary>
+        /// Returns the value of a repeating combinator. *Important: (N ≥ R)
+        /// </summary>
         public static double CombinatorialR(double numN, double numR)
         {
             double result;
@@ -20,6 +26,19 @@ namespace UltraSmart
             return result;
         }
 
+        /// <summary>
+        /// Returns the value of a non-repeating variation. *Important: (N ≥ R)
+        /// </summary>
+        public static double Variation(double numN, double numR)
+        {
+            double result;
+            result = Facorials(numN) / Facorials(numN - numR);
+            return result;
+        }
+
+        /// <summary>
+        /// Returns the value of a sum
+        /// </summary>
         public static double Sum(double num)
         {
             double result;
@@ -27,11 +46,17 @@ namespace UltraSmart
             return result;
         }
 
+        /// <summary>
+        /// Returns the value of the rest of a division
+        /// </summary>
         public static double Mod(double num1, double num2)
         {
             return num1 % num2;
         }
 
+        /// <summary>
+        /// Returns the factorial of a number
+        /// </summary>
         public static double Facorials(double num)
         {
             double factor;
@@ -43,6 +68,9 @@ namespace UltraSmart
             return factor;
         }
 
+        /// <summary>
+        /// Returns the Maximum Common Divisor of 2 numbers
+        /// </summary>
         public static double MCD(double num1, double num2) //Algoritmo de Euclides
         {
             double iaux; //Auxiliar
@@ -59,6 +87,9 @@ namespace UltraSmart
             return i1; //Ultimo resto no nulo
         }
 
+        /// <summary>
+        /// Returns the Minimum Common Multiple of 2 numbers
+        /// </summary>
         public static double MCM(double num1, double num2)
         {
             return (num1 / MCD(num1, num2)) * num2;
