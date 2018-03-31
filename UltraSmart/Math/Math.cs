@@ -9,30 +9,30 @@ namespace UltraSmart
         /// <summary>
         /// Returns the value of a combination without repeats. *Important: (N ≥ R)
         /// </summary>
-        public static double Combinatorial(double numN,double numR)
+        public static double Combinatorial(double N,double R)
         {
             double result;
-            result = Facorials(numN) / Facorials(numR) * Facorials(numN - numR);
+            result = Facorials(N) / Facorials(R) * Facorials(N - R);
             return result;            
         }
 
         /// <summary>
         /// Returns the value of a repeating combinator. *Important: (N ≥ R)
         /// </summary>
-        public static double CombinatorialR(double numN, double numR)
+        public static double CombinatorialR(double N, double R)
         {
             double result;
-            result = Facorials(numN + numR - 1) / Facorials(numR) * Facorials(numN - 1);
+            result = Facorials(N + R - 1) / Facorials(R) * Facorials(N - 1);
             return result;
         }
 
         /// <summary>
         /// Returns the value of a non-repeating variation. *Important: (N ≥ R)
         /// </summary>
-        public static double Variation(double numN, double numR)
+        public static double Variation(double N, double R)
         {
             double result;
-            result = Facorials(numN) / Facorials(numN - numR);
+            result = Facorials(N) / Facorials(N - R);
             return result;
         }
 
@@ -93,6 +93,14 @@ namespace UltraSmart
         public static double MCM(double num1, double num2)
         {
             return (num1 / MCD(num1, num2)) * num2;
+        }
+
+        /// <summary>
+        /// Returns the root of X power
+        /// </summary>
+        public static double SqrtX(double Pow, double X)
+        {
+            return System.Math.Pow(X, 1/Pow);
         }
     }
 }
