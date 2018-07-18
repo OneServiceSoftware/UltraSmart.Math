@@ -76,8 +76,8 @@ namespace UltraSmart
             double iaux; //Auxiliar
             num1 = System.Math.Abs(num1); //Toma valor absoluto
             num2 = System.Math.Abs(num2);
-            double i1 = System.Math.Max(num1, num1); //i1 = el más grande
-            double i2 = System.Math.Min(num1, num1); //i2 = el más pequeño
+            double i1 = System.Math.Max(num1, num2); //i1 = el más grande
+            double i2 = System.Math.Min(num1, num2); //i2 = el más pequeño
             do
             {
                 iaux = i2;  //Guarda Divisor
