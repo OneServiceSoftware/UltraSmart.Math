@@ -12,7 +12,7 @@ namespace UltraSmart
         public static double Combinatorial(double N,double R)
         {
             double result;
-            result = Facorials(N) / Facorials(R) * Facorials(N - R);
+            result = Facorials(N) / (Facorials(R) * Facorials(N - R));
             return result;            
         }
 
@@ -22,7 +22,7 @@ namespace UltraSmart
         public static double CombinatorialR(double N, double R)
         {
             double result;
-            result = Facorials(N + R - 1) / Facorials(R) * Facorials(N - 1);
+            result = Facorials(N + R - 1) / (Facorials(R) * Facorials(N - 1));
             return result;
         }
 
